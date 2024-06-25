@@ -1,0 +1,15 @@
+:root{
+    --mainTextColor: #757575;
+    --mainTitleColor: #212121;
+    --buttonColor: #2196F3;
+    --hoverTextColor: #2196F3;
+    --heroBgColor: #2F303A;
+    --teamBgColor: #F5F4FA;
+    --footerBgColor: #2F303A;
+    --secondaryTextColor: #ffffff;
+    /* --main-text-color */
+    /* --main_text_color */
+}
+p{
+    /* color: var(--mainTextColor); */
+}
