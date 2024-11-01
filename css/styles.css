@@ -68,21 +68,21 @@ p {
 }
 .features-list {
     display: flex;
-    justify-content: space-around; /* Розподіляє елементи рівномірно */
-    gap: 20px; /* Відстань між блоками */
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .features-item {
     display: flex;
-    flex-direction: column; /* Вирівнює заголовок і текст вертикально */
-    align-items: center; /* Центрує елементи в кожному блоці */
-    max-width: 200px; /* Обмежує ширину кожного блоку */
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
     text-align: center;
 }
 
 .features-item-title {
     font-weight: bold;
-    margin-bottom: 10px; /* Відступ між заголовком і текстом */
+    margin-bottom: 10px;
 }
 
 .we-do-list {
