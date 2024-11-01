@@ -19,17 +19,117 @@ body {
     
 }
 h1, h2, h3 {
-    line-height: 1.2; /* Тісніший міжрядковий інтервал для заголовків */
+    line-height: 1.2;
 }
 
 p {
-    line-height: 1.6; /* Більш розріджений для параграфів */
+    line-height: 1.6; 
 }
 .container {
-    max-width: 1200px; /* Максимальна ширина, яку ви виміряли */
-    margin: 0 auto;    /* Центрування контейнера */
-    padding: 0 15px;   /* Відступи всередині контейнера */
+    max-width: 1200px; 
+    padding: 0 15px;  
 }
 .section {
-    padding: 60px 0; /* Відступи зверху і знизу */
+    padding: 0px 0; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
+
+.contackts-list {
+    display: flex;
+    gap: 15px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+}
+.features-list {
+    display: flex;
+    justify-content: space-around; /* Розподіляє елементи рівномірно */
+    gap: 20px; /* Відстань між блоками */
+}
+
+.features-item {
+    display: flex;
+    flex-direction: column; /* Вирівнює заголовок і текст вертикально */
+    align-items: center; /* Центрує елементи в кожному блоці */
+    max-width: 200px; /* Обмежує ширину кожного блоку */
+    text-align: center;
+}
+
+.features-item-title {
+    font-weight: bold;
+    margin-bottom: 10px; /* Відступ між заголовком і текстом */
+}
+
+.we-do-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.we-do-list-item {
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.team li {
+    flex: 1 1 250px;
+    max-width: 250px;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    background-color: var(--footerBgColor);
+    color: var(--secondaryTextColor);
+}
+
+.contacts {
+    display: flex;
+    gap: 15px;
+}
+.team img {
+    width: 270px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
 }
