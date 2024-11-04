@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&family=Roboto:wght@400;500;700&display=swap"rel="stylesheet"/>
     <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
@@ -37,13 +41,15 @@
     </header>
     <main>
       <section class="portfolio">
-        <nav class="portfolio-catrgories">
+        <div class="portfolio-categories-wrapper">
+          <nav class="portfolio-categories">
             <a href="#" class="active">Усі</a>
             <a href="#">Веб-сайти</a>
             <a href="#">Додатки</a>
             <a href="#">Дизайн</a>
-            <a href="#">Маркеткинг</a>
-        </nav>
+            <a href="#">Маркетинг</a>
+          </nav>
+        </div>
         <div class="portfolio-gallery">
           <div class="portfolio-item">
             <img src="./images/portfolio_sek2_1.jpg" alt="">
@@ -94,29 +100,21 @@
       </section>
     </main>
     <!-- footer -->
-    <footer>
-      <a href="/"><span>Web</span><span>Studio</span></a>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Студія</a>
+    <footer class="footer">
+      <a href="/" class="logo">
+        <span class="logo-web">Web</span><span class="logo-studio">Studio</span>
+      </a>
+      <address class="address">
+        <p class="location">м. Київ, пр-т Лесі Українки, 26</p>
+        <ul class="contacts">
+          <li class="email">
+            <a href="mailto:info@devstudio.com">info@devstudio.com</a>
           </li>
-          <li>
-            <a href="#">Портфоліо</a>
-          </li>
-          <li>
-            <a href="#">Контакти</a>
+          <li class="tel">
+            <a href="tel:+380961111111">+38 096 111 11 11</a>
           </li>
         </ul>
-      </nav>
-      <ul>
-        <li>
-          <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-        </li>
-        <li>
-          <a href="tel:+380961111111">+38 096 111 11 11</a>
-        </li>
-      </ul>
-    </footer>
+      </address>
+    </footer>    
   </body>
 </html>

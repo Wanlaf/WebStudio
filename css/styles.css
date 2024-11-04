@@ -1,4 +1,4 @@
-:root{
+:root {
     --mainTextColor: #757575;
     --mainTitleColor: #212121;
     --buttonColor: #2196F3;
@@ -7,47 +7,63 @@
     --teamBgColor: #F5F4FA;
     --footerBgColor: #2F303A;
     --secondaryTextColor: #ffffff;
-    /* --main-text-color */
-    /* --main_text_color */
-
-    /* color: var(--mainTextColor); */
 }
 body {
     font-family: 'Inter', sans-serif;
-    line-height: 1.5;  
-    
+    line-height: 1.5;
 }
-h1, h2, h3 {
-    line-height: 1.2;
-}
-
-p {
-    line-height: 1.6; 
-}
-
-.section {
-    padding: 0px 0; 
-}
-
-.container {
+.header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 50px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    background-color: #2F303A;
+    color: #fff;
 }
-
-.nav-list {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+.logo-web {
+    color: #fff;
+}
+.logo-studio {
+    color: #2196F3;
+}
+.nav-list{
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
 }
-
+.nav-list-item a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+.nav-list-item a:hover {
+    color: #2196F3;
+}
 .contackts-list {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    align-items: center;
 }
-
+.contacts-list-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.contacts-list-item a:hover {
+    color: #2196F3;
+}
 .hero {
     display: flex;
     flex-direction: column;
@@ -60,7 +76,6 @@ p {
     justify-content: space-around;
     gap: 20px;
 }
-
 .features-item {
     display: flex;
     flex-direction: column;
@@ -68,37 +83,31 @@ p {
     max-width: 200px;
     text-align: center;
 }
-
 .features-item-title {
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .we-do-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 15px;
 }
-
 .we-do-list-item {
     flex: 1 1 300px;
     max-width: 300px;
 }
-
 .team {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
 }
-
 .team li {
     flex: 1 1 250px;
     max-width: 250px;
     text-align: center;
 }
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -106,8 +115,42 @@ p {
     padding: 20px 0;
     background-color: var(--footerBgColor);
     color: var(--secondaryTextColor);
+    text-align: center;
 }
-
+.footer .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.footer .logo .logo-web {
+    color: #fff;
+}
+.footer .logo .logo-studio {
+    color: #2196F3;
+}
+.footer .address {
+    text-align: center;
+}
+.footer .location {
+    margin: 5px 0;
+}
+.footer .contacts {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer .contacts a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer .contacts a:hover {
+    color: #2196F3;
+}
 .contacts {
     display: flex;
     gap: 15px;
@@ -122,32 +165,35 @@ p {
     text-align: center;
     margin-bottom: 20px;
 }
-.portfolio-categories {
-    position: absolute;
-    width: 575px;
-    height: 54px;
-    top: 174px;
-    left: 512px;
+.portfolio-categories-wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 0;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
+.portfolio-categories {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
 .portfolio-categories a {
     padding: 10px 20px;
     text-decoration: none;
     color: #212121;
     background-color: #f4f4f4;
     border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
     font-weight: 500;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .portfolio-categories a.active {
-    background-color: #2196F3;
-    color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f4f4f4;
+    color: #212121;
 }
 
 .portfolio-categories a:hover {
@@ -156,16 +202,14 @@ p {
 }
 
 .portfolio-gallery {
-    display: flex;
-    flex-wrap: wrap; /* Перенос елементів на новий рядок при обмеженні ширини */
-    justify-content: center; /* Рівномірний розподіл елементів */
-    gap: 30px; /* Відстань між картками */
-    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Окремі елементи портфоліо */
 .portfolio-item {
-    width: 220;
     background-color: #f8f8f8;
     padding: 15px;
     border: 1px solid #e0e0e0;
@@ -176,7 +220,7 @@ p {
 
 .portfolio-item img {
     width: 100%;
-    height: 150px;
+    height: 180px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -189,66 +233,35 @@ p {
 }
 
 .portfolio-item p {
-    color: #757575;
+    color: var(--mainTextColor);
     font-size: 14px;
     margin-bottom: 0;
 }
+h1, h2, h3 {
+    line-height: 1.2;
+    line-height: 1.2;
+}
 
-.header {
+p {
+    line-height: 1.6;
+    line-height: 1.6; 
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px; 
+    padding: 0 15px;  
+}
+.section {
+    padding: 60px 0;
+    padding: 0px 0; 
+}
+.container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #2F303A;
-    color: #fff;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-}
-.logo-web {
-    color: #fff;
-}
-
-.logo-studio {
-    color: #2196F3;
-}
-/* Навігаційний список */
-.nav-list {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex: 1;
-    justify-content: center;
-}
-
-.nav-list-item a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.nav-list-item a:hover {
-    color: #2196F3;
-}
-
-.contacts-list {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.contacts-list-item a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contacts-list-item a:hover {
-    color: #2196F3; /* Зміна кольору при наведенні */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
